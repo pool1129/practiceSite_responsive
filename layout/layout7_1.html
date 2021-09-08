@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout5</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        #wrap{width: 1200px; margin: 0 auto;}
+        
+        header{width: 100%; height: 100px; background: #FFBF00;}
+        article{width: 100%; height: 300px; background: #FBCEB1;}
+        
+        aside{width: 100%; height: 400px;}
+        .content1{float:left; width: 33.333%; height: 400px; background:#CC5500;}
+        .content2{float:left; width: 66.666%; height: 200px; background:#D27D2D;}
+        .content3{float:left; width: 66.666%; height: 200px; background:#F88379;}
+
+        section{width: 100%; height: 300px;}
+        .main1{float:left; width: 33.333%; height: 300px; background:#FFAA33;}
+        .main2{float:left; width: 33.333%; height: 300px; background:#E35335;}
+        .main3{float:left; width: 33.333%; height: 300px; background:#F08000;}
+        
+        #content{padding:5% ; width: 90%; height: 300px; background:#C9A9A6; overflow: hidden;}
+        #content>div{width: 23%; height: 90%; margin: 1%; background:#FFC0CB; float: left; border-radius: 10px;}
+        
+        footer{width: 100%; height: 100px; background:#800080;}
+
+        @media (max-width:1220px){
+            #wrap{width: 100%;}
+            .main1{width: 50%;}
+            .main2{width: 50%;}
+            .main3{display: none;}
+            #content>div{width: 31.333%;}
+            #content>div:nth-child(3n){display: none;}
+        }
+        
+        @media (max-width:768px){
+            .main1{width: 100%;}
+            .main2{width: 100%;}
+            #content>div{margin: 2%; width: 29.333%;}
+        }
+        
+        @media (max-width:480px){
+            .content1{width: 100%;}
+            .content2{width: 100%;}
+            .content3{width: 100%;}
+            #content>div{float: none; width:100%; height: 30%;}
+        }
+    </style>
+    
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <article></article>
+        <aside>
+            <div class="content1"></div>
+            <div class="content2"></div>
+            <div class="content3"></div>
+        </aside>
+        <section>
+            <div class="main1"></div>
+            <div class="main2"></div>
+            <div class="main3"></div>
+        </section>
+        <div id="content">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <footer></footer>
+    </div>
+</body>
+</html>
